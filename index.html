@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <title>Artisan Magicien</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Gothic+A1:wght@300;400;800&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
 
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="logo">
+                <h1>L'ATELIER</h1>
+            </div>
+            <div class="CTA-BTN">
+                <a style="--color: #fff; --color-hover: grey;">
+                    <img src="images/phone_100313.png" alt="Contact">
+                    <p>CONTACTER</p>
+                </a>
+            </div>
+            <ul class="nav-links">
+				<!-- <li class="lang"> -->
+					<!-- <span class="lang-text">Francais</span> -->
+					<!-- <span>˅</span> -->
+				<!-- </li> -->
+                <li><a href="#intro">Accueil</a><span class="endnav">></span></li>
+                <li><a href="#services">Services</a><span class="endnav">></span></li>
+                <li><a href="#about">À Propos</a><span class="endnav">></span></li>
+                <li><a href="#testimonials">Témoignages</a><span class="endnav">></span></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+		<section class="homescreen">
+		<div class="youtube-container">
+	<iframe src="https://www.youtube.com/embed/B9lF7tZ6soA?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1" 
+	title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+	<diV class="sub-container">	
+	<p id="text-container"></p>
+	<h2 id="author"></h2>
+	</div>
+        </section>
+		    <section class="banner">
+        <h1>L'Art de la Magie Sur Mesure</h1>
+    </section>
+        <section class="video">
+            <h2>Découvrez mon Atelier</h2>
+            <div class="youtube-container">
+	<iframe src="https://www.youtube.com/embed/B9lF7tZ6soA?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1" 
+	title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+        </section>
+        <section class="services" id="services">
+            <h2>Nos Services</h2>
+            <p>Création de tours sur mesure, consultations et formations.</p>
+        </section>
+        <section class="about" id="about">
+            <h2>À Propos</h2>
+            <p>Votre artisan a plus de 20 ans d'expérience dans la création de tours de magie uniques et sur mesure.</p>
+        </section>
+        <section class="testimonials" id="testimonials">
+            <h2>Témoignages</h2>
+            <p>"Les meilleurs tours de magie que j'ai jamais vus!" - Client satisfait</p>
+        </section>
+        <section class="contact" id="contact">
+            <h2>Contactez-moi:</h2>
+            <form>
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </div>
+	<footer></footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
