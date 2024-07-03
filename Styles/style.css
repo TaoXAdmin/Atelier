@@ -32,9 +32,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
-.endnav{
-	text-align:right;
-}
+
 
 .logo h1 {
     color: white;
@@ -67,6 +65,10 @@ h1, h3 {
 
 h2 {
     font-family: 'Playfair Display', serif;
+}
+
+section{
+	margin-top: 80px;
 }
 
 section p {
@@ -191,10 +193,10 @@ nav {
     .nav-links {
         flex-direction: column;
         position: fixed;
-        top: -50px;
+        top: -20px;
         left: 0;
         width: 100%;
-        height: 89%;
+        height: 120%;
         background-color: #000;
         align-items: left;
         justify-content: center;
@@ -202,6 +204,9 @@ nav {
         transform: translateY(-100%);
         z-index: 999;
     }
+	.firstnav{
+		
+	}
 
     .nav-links.active {
         transform: translateY(0);
@@ -235,7 +240,7 @@ nav {
 	/* No clicking/hover effects */
 	pointer-events: none;
 	}
-	iframe {
+	.iframe-video {
 		/* Extend it beyond the viewport... */
 		opacity:0.75;
 		width: 300%;
@@ -315,7 +320,7 @@ nav {
 }
 .CTA-BTN {
     background-color: #D4AF37;
-    padding: 10px;
+    padding: 10px 20px 10px 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -422,4 +427,91 @@ nav.navbar .nav-links li a {
 
 .nav-active {
     display: flex;
+}
+
+footer{
+	margin-top: 150px;
+	font-size:20px;
+}
+
+#social-dark-icons{
+	margin-bottom:15%;
+	list-style: none;
+	padding: 0;
+    text-align: center;
+	vertical-align: top;
+
+}
+#social-dark-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+#social-dark-icons img{
+	    max-width: 100%;
+	width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.telemail a,p{
+	text-align: left;
+	font-family: "Gothic A1", sans-serif;
+	color: white;
+	text-decoration:none;
+}
+
+
+.tel{
+	margin-left: 3.5%;
+	font-weight:bold;
+}
+.email{
+	margin-left: 3.5%;
+	font-weight:bold;
+}
+.telemail img{
+	 filter: brightness(0) saturate(100%) invert(72%) sepia(75%) saturate(500%) hue-rotate(-10deg);
+}
+
+.fixTel{
+	margin-left:2.5%;
+	text-align: left;
+	font-family: "Gothic A1", sans-serif;
+	color: white;
+	text-decoration:none;
+	display: flex;
+   align-items:center;
+}
+.under{
+	margin-top:  7.5%;
+	margin-left: 3.5%;
+}
+
+.address{
+	margin-left: 17.5%;
+    margin-top: 13%;
+    margin-bottom: -24%;
+	border-left: 1.5px solid #D4AF37;
+	padding-left:5%;
+}
+
+.iframe-map{
+		width: 300%;
+		height: 100%;
+		margin-left:-100px;
+}
+.fixAddress{
+	font-size:16px;
+	font-weight:bold;
+}
+.David{
+	font-size:20px;
+	font-weight:bold;
+}
+
+.colorFix{
+
+}
+
+.capital{
+	font-size: 26px;
 }
