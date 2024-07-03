@@ -57,3 +57,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const elementsToType = [
+        { id: "tel", text: "06 62 15 07 67" },
+        { id: "email", text: "david.sidelsky@gmail.com" },
+        { id: "D", text: "D" },
+        { id: "avid", text: "avid" },
+        { id: "S", text: "S" },
+        { id: "idelsky", text: "idelsky" },
+        { id: "adresse", text: "11 rue Paul Eluard" },
+		{ id: "adresse2", text: "94220 Charenton-le-Pont" }
+    ];
+    
+    let speed = 40;
+    let elementIndex = 0;
+    let textPos = 0;
+    let typing = false;
+
+    function typeWriter() {
+        if (elementIndex < elementsToType.length) {
+            const element = document.getElementById(elementsToType[elementIndex].id);
+            const text = elementsToType[elementIndex].text;
+            const cursor = "<span class='cursor'>_</span>";
+            if (textPos < text.length) {
+                element.innerHTML = text.substring(0, textPos) + cursor;
+                textPos++;
+                setTimeout(typeWriter, speed);
+            } else {
+                element.innerHTML = text; // Remove cursor from element
+                textPos = 0;
+                elementIndex++;
+                setTimeout(typeWriter, 500); // Pause before starting next element
+            }
+        } else {
+            typing = false;
+        }
+    }
+
+    function resetTypewriter() {
+        elementsToType.forEach(item => {
+            document.getElementById(item.id).innerHTML = "";
+        });
+        elementIndex = 0;
+        textPos = 0;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!typing) {
+                    typing = true;
+                    typeWriter();
+                }
+            } else {
+                if (typing) {
+                    typing = false;
+                    resetTypewriter();
+                }
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust this value to change the visibility threshold
+    });
+
+    elementsToType.forEach(item => {
+        observer.observe(document.getElementById(item.id));
+    });
+});
